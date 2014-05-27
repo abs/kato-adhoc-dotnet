@@ -30,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="JWT">
-      <HintPath>..\packages\JWT.1.3.2\lib\3.5\JWT.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -43,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="KeyGenerator.cs" />
+    <Compile Include="Adhoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -57,4 +54,10 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <ProjectReference Include="..\jwt\JWT\JWT.csproj">
+      <Project>{A80B51B8-DDF6-4026-98A4-B59653E50B38}</Project>
+      <Name>JWT</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
